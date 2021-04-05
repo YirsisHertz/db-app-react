@@ -1,8 +1,16 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import { NavLink, useHistory } from "react-router-dom";
+import { LogContext } from "../contex/LogContext";
+import { types } from "../types/types";
 
-const Navbar = ({ history }) => {
+const Navbar = () => {
+  const { dispatch } = useContext(LogContext);
+
+  const history = useHistory();
+
   const handleLogout = () => {
+    dispatch({ type: types.logout });
+
     history.replace("/login");
   };
 

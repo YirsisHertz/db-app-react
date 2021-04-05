@@ -6,10 +6,10 @@ import Navbar from "../components/Navbar";
 import SearchScreen from "../components/SearchScreen";
 import WomanScreen from "../components/WomanScreen";
 
-const AppRouter = ({ history }) => {
+const AppRouter = () => {
   return (
     <div>
-      <Navbar history={history} />
+      <Navbar />
       <Switch>
         <Route exact path="/mans" component={ManScreen} />
         <Route
