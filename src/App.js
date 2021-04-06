@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <LogContext.Provider value={{ log, dispatch }}>
-      <LoginRouter />;
+      <LoginRouter />
     </LogContext.Provider>
   );
 };
